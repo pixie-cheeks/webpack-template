@@ -1,4 +1,5 @@
 /* eslint-disable import/no-import-module-exports */
+
 import 'normalize.css';
 import './style.css';
 
