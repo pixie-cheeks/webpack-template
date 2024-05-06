@@ -10,5 +10,3 @@ module.exports = merge(common, {
     hot: true,
   },
 });
-
-// set up hmr
