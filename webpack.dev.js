@@ -10,6 +10,14 @@ module.exports = merge(common, {
     watchFiles: ['./src/index.html'],
     hot: true,
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
