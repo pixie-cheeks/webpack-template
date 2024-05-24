@@ -7,8 +7,11 @@
     "browser": true
   },
   "extends": ["airbnb-base", "prettier"],
+  "plugins": ["disable-autofix"],
   "rules": {
     "no-unused-vars": "warn",
-    "no-console": "off"
+    "no-console": "off",
+    "prefer-const": "off",
+    "disable-autofix/prefer-const": "warn"
   }
 }
