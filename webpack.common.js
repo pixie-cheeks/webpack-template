@@ -23,7 +23,7 @@ module.exports = {
         use: ['html-loader'],
       },
       {
-        test: /\.(?:js|mjs|cjs)$/,
+        test: /\.(js|mjs|cjs)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
