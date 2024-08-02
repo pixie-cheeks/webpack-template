@@ -1,5 +1,3 @@
-import { IgnorePlugin } from 'webpack';
-
 module.exports = {
   env: {
     browser: true,
