@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d dist -m \"Deploy at $(date '+%F %T')\"",
     "lint": "eslint . -c .config/eslintrc.cjs",
     "lint:fix": "eslint . --fix -c .config/eslintrc.cjs",
-    "stylelint": "stylelint . -c .config/stylelint.config.js",
+    "stylelint": "stylelint **/*.css -c .config/stylelint.config.js",
     "test": "jest"
   },
   "keywords": [],
