@@ -13,6 +13,7 @@ const classPattern = `^${blockName}(${elemName})?(${modifierName})?(${modifierVa
 
 export default {
   extends: ['stylelint-config-standard'],
+  ignoreFiles: ['!**/*.css'],
   rules: {
     'declaration-no-important': true,
     'selector-class-pattern': [

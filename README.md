@@ -8,4 +8,4 @@ as I gain more knowledge and become more capable in general.
 - Uses pnpm
 - Uses stylelint with a BEM-compliant config
 - Uses eslint with the airbnb-base config and a few personal modifications
-- Almost all js files are in ES6 except for the `.eslintrc.cjs`
+- Almost all js files are in ES6 except for the `eslintrc.cjs`
