@@ -8,9 +8,9 @@
     "build": "webpack -c webpack/prod.js",
     "start": "webpack serve --open -c webpack/dev.js",
     "deploy": "gh-pages -d dist -m \"Deploy at $(date '+%F %T')\"",
-    "lint": "eslint . -c .config/eslintrc.cjs",
+    "lint": "eslint -c .config/eslintrc.cjs --max-warnings 0 .",
     "lint:fix": "eslint . --fix -c .config/eslintrc.cjs",
-    "stylelint": "stylelint **/*.css -c .config/stylelint.config.js",
+    "stylelint": "stylelint -c .config/stylelint.config.js --mw 0 **/*.css",
     "test": "jest"
   },
   "keywords": [],
