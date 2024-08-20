@@ -1,4 +1,10 @@
 /** @type {import('stylelint').Config} */
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const root = resolve(__dirname, '..');
+
 const genericOnlyClassRule = [
   0,
   { message: 'BEM: Only use a single class to avoid specificity issues' },
@@ -13,6 +19,9 @@ const classPattern = `^${blockName}(${elemName})?(${modifierName})?(${modifierVa
 
 export default {
   extends: ['stylelint-config-standard'],
+  ignoreFiles: [`./node_modules`, `./**/*.*`, `!./**/*.css`].map((glob) =>
+    glob.replace(/^(!)?\.\//, `$1${root}/`),
+  ),
   rules: {
     'declaration-no-important': true,
     'selector-class-pattern': [
