@@ -17,9 +17,26 @@ const modifierName = `--${BEM_NAMES}`;
 const modifierValue = `--${BEM_NAMES}`;
 const classPattern = `^${blockName}(${elemName})?(${modifierName})?(${modifierValue})?$`;
 
+const bemRules = {
+  'selector-max-combinators': [
+    0,
+    {
+      message: 'BEM: Combinators increase specificity',
+    },
+  ],
+  'selector-max-class': [
+    1,
+    { message: 'BEM: Use a single class for flat specificity' },
+  ],
+  'selector-max-attribute': genericOnlyClassRule,
+  'selector-max-id': genericOnlyClassRule,
+  'selector-max-type': genericOnlyClassRule,
+  'selector-max-universal': genericOnlyClassRule,
+};
+
 export default {
-  extends: ['stylelint-config-standard'],
-  ignoreFiles: [`./node_modules`, `./**/*.*`, `!./**/*.css`].map((glob) =>
+  extends: ['stylelint-config-standard', 'stylelint-config-concentric-order'],
+  ignoreFiles: ['./node_modules', './**/*.*', '!./*.css'].map((glob) =>
     glob.replace(/^(!)?\.\//, `$1${root}/`),
   ),
   rules: {
@@ -32,19 +49,6 @@ export default {
         resolveNestedSelectors: true,
       },
     ],
-    'selector-max-combinators': [
-      0,
-      {
-        message: 'BEM: Combinators increase specificity',
-      },
-    ],
-    'selector-max-class': [
-      1,
-      { message: 'BEM: Use a single class for flat specificity' },
-    ],
-    'selector-max-attribute': genericOnlyClassRule,
-    'selector-max-id': genericOnlyClassRule,
-    'selector-max-type': genericOnlyClassRule,
-    'selector-max-universal': genericOnlyClassRule,
+    ...bemRules,
   },
 };
