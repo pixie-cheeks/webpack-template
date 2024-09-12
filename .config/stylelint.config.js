@@ -36,7 +36,7 @@ const bemRules = {
 
 export default {
   extends: ['stylelint-config-standard', 'stylelint-config-concentric-order'],
-  ignoreFiles: ['./node_modules', './**/*.*', '!./*.css'].map((glob) =>
+  ignoreFiles: ['./node_modules', './**/*.*', '!./**/*.css'].map((glob) =>
     glob.replace(/^(!)?\.\//, `$1${root}/`),
   ),
   rules: {
