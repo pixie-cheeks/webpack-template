@@ -9,7 +9,7 @@ module.exports = {
   ignorePatterns: ['/*', '!/src'],
   rules: {
     'no-unused-vars': 'warn',
-    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'no-plusplus': 'off',
     'import/extensions': ['error', 'ignorePackages'],
     'no-param-reassign': ['error', { props: false }],
 
