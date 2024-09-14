@@ -1,8 +1,8 @@
 {
   "name": "webpack-template",
+  "private": true,
   "version": "1.0.0",
   "description": "Basic webpack template",
-  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "build": "webpack -c webpack/prod.js",
@@ -13,9 +13,6 @@
     "csslint": "stylelint -c .config/stylelint.config.js --mw 0 .",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@awmottaz/prettier-plugin-void-html": "^1.6.1",
     "@babel/core": "^7.25.2",
@@ -35,6 +32,9 @@
     "html-webpack-plugin": "^5.6.0",
     "jest": "^29.7.0",
     "mini-css-extract-plugin": "^2.9.1",
+    "postcss": "^8.4.47",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.0.3",
     "prettier": "^3.3.3",
     "style-loader": "^4.0.0",
     "stylelint": "^16.9.0",

@@ -1,3 +1,7 @@
-.placeholder {
-  color: red;
+.root__body {
+  margin: 0;
+}
+
+.body {
+  min-height: 100dvh;
 }
